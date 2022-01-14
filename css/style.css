@@ -66,7 +66,7 @@ nav{
     border: none;
     color: #fff;
     padding: 10px 24px;
-    background: #E02C6D;;
+    background: #E02C6D;
     border-radius: 41px;
     font-size: 16px;
     font-weight: bold;
@@ -156,9 +156,40 @@ nav{
  .collection-item .collec-img img:hover{
      transform: scale(1.1);
  }
+.see-more{
+  text-align: right;
+  padding: 40px 0;
+}
+ .read{
+     background-color: transparent;
+     color: #E02C6D;
+ }
+ /*-----foooter------- */
+.footer{
+    background: #0A0826;
+    text-align: center;
+    padding: 50px 0;
+    color: #fff;
+}
 
- /*-----foooter----- */
-
+.footer-content p{
+      color: #D9DBE1;
+      font-size: 14px;
+      line-height: 2;
+}
+.socal-link{
+    margin-top: 14px;
+}
+ .socal-link .icon{
+   width: 32px;
+   height: 32px;
+   color: #fff;
+   background: #ffffff1e;
+   line-height: 32px;
+   border-radius: 50%;
+   cursor: pointer;
+   margin: 10px;
+}
 
 
 
