@@ -79,6 +79,25 @@ nav{
     width: 440px;
     height: 414px;
 }
+/*--------------------------
+    logo section styles
+---------------------------*/
+.logo-section{
+    margin-bottom: 5%;
+}
+.logo-hr{
+   height: 4px;
+   border: 0;
+   background: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%);
+}
+.logo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 40px;
+}
+
+
 
 
 
