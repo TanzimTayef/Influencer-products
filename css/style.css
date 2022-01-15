@@ -242,7 +242,7 @@ header .bar-icon{
     transition: .4s;
  }
  .collection-item .collec-img img:hover{
-     transform: scale(1.1);
+     transform: scale(1.3);
  }
 .see-more{
   text-align: right;
@@ -286,14 +286,13 @@ header .bar-icon{
    align-items: center;
    color: #000;
    cursor: pointer;
-   transition: .4s;
+   transition: .3s;
 }
 .product-item:hover{
-    transform: translateY(10px);
+    transform: translateY(15px);
 }
 .product-img img{
-    width: 100%;
-   height: 100%;
+  width: 100%;
 }
 .product-item .product-info h3{
     font-size: 24px;
@@ -301,7 +300,11 @@ header .bar-icon{
 .product-item .product-info p{
     color: #707070;
     font-size: 14px;
-    padding: 12px 0;
+    margin: 10px 0;
+}
+.product-item .product-info .hilight{
+    color: #E02C6D;
+    font-size: 18px;
 }
 /* ------------------------
      Catagory section styles
@@ -350,6 +353,12 @@ header .bar-icon{
     background: #ffffff1e;
     border: none;
     border-radius: 5px;
+    margin-bottom: 14px;
+}
+.cata-column img{
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
 }
 .icon-coll{
     display: flex;
@@ -413,6 +422,7 @@ Mobile Responsive
     /* ------banner----- */
     .banner-left{
        margin-top: 0;
+       margin-bottom: 30px;
     }
     .banner-left .banner-title{
         font-size: 34px;
@@ -445,7 +455,7 @@ Mobile Responsive
          margin: 0 30px;
      }
      .collection-item .collec-info .prize{
-        font-size: 16px;
+        font-size: 22px;
     
     }
     .collection-item .collec-info .info-text{
@@ -454,6 +464,9 @@ Mobile Responsive
     }
     .collection-item .collec-info .rating{
        font-size: 12px;
+    }
+    .collection-item .collec-info .info-text{
+        font-size: 13px;
     }
      .see-more{
     text-align: center;
