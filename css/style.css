@@ -153,6 +153,9 @@ header .bar-icon{
 .banner-right{
   display: flex;
   justify-content: center;
+  background-image: url(../images/Circle\ design.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .banner-right img{
     width: 440px;
