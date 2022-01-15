@@ -54,7 +54,6 @@ nav{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     height: 100vh;
-   
 }
 .banner-right .banner-title{
    font-size: 52px;
