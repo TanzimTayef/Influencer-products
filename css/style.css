@@ -19,14 +19,21 @@ a{
     width: 85%;
     margin: 0 auto;
 }
-
-/* ---header--- */
+/* ----------------------
+  header section styles
+------------------------- */
 nav{
     display: flex;
     justify-content: space-between;
     height: 45px;
     align-items: center;
     padding-top: 70px;
+}
+header .bar-icon{
+    font-size: 18px;
+    margin: 10px;
+    cursor: pointer;
+    display: none;
 }
 .logo a{
    color: #3A3A3A;
@@ -38,7 +45,7 @@ nav{
 }
 .navbar li{
     list-style: none;
-    margin: 10px;
+    margin: 5px;
 }
 .navbar li a{
     font-size: 16px;
@@ -46,17 +53,87 @@ nav{
     font-weight: 600;
     padding: 15px 10px;
 }
+.navbar li a:hover{
+    color: #E02C6D;
+}
 .bannar-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     padding: 100px 0;
 }
-.banner-right .banner-title{
+.banner-left .banner-title{
    font-size: 52px;
    font-weight: 700;
+   position: relative;
+   display: inline-block;
 }
-.banner-right .banner-text{
+.banner-title .animat-tilte{
+    color: transparent;
+}
+.banner-title .animat-tilte::before{
+    content: '';
+    position: absolute;
+    animation: tryping 2.5s linear  infinite;
+    top: 0;
+    left: 0;
+}
+@keyframes  tryping {
+   0%{
+       content: '';
+   }
+    10%{
+        content: 'I';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    30%{
+        content: 'in';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    40%{
+        content: 'inf';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    50%{
+        content: 'infl';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    60%{
+        content: 'influ';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    70%{
+        content: 'influe';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    80%{
+        content: 'influen';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    90%{
+        content: 'influenc';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    95%{
+        content: 'influence';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+    100%{
+        content: 'influencer';
+        color: #E02C6D;
+        transform: scale(1.1);
+    }
+}
+.banner-left .banner-text{
     font-size: 16px;
     margin-bottom: 30px;
 }
@@ -70,16 +147,19 @@ nav{
     font-weight: bold;
     cursor: pointer;
 }
-.banner-left{
+.hero-btn:hover{
+    background-color: #e40c5b;
+}
+.banner-right{
   display: flex;
   justify-content: center;
 }
-.banner-left img{
+.banner-right img{
     width: 440px;
     height: 414px;
 }
 /*--------------------------
-    logo section styles
+    Brand section styles
 ---------------------------*/
 .brand-hr{
    height: 4px;
@@ -92,8 +172,17 @@ nav{
     justify-content: space-evenly;
     align-items: center;
     padding: 40px;
-}
+    gap: 30px;
 
+}
+.brand-item{
+    transition: .5s;
+    cursor: pointer;
+   
+}
+.brand-item:hover{
+   transform: scale(1.3);
+}
 /*-------------------------------
      Collection section styles
  ------------------------------- */
@@ -109,7 +198,6 @@ nav{
      display: grid;
      grid-template-columns: repeat(3, 1fr);
      gap: 30px;
-     
  }
  .collection-item{
      padding: 17px 16px;
@@ -149,7 +237,6 @@ nav{
     object-fit: cover;
     border-radius: 5px;
     transition: .4s;
-    
  }
  .collection-item .collec-img img:hover{
      transform: scale(1.1);
@@ -162,21 +249,120 @@ nav{
      background-color: transparent;
      color: #E02C6D;
  }
- /*-----foooter------- */
+ .read:hover{
+     background: transparent;
+ }
+
+ /* --===========================
+         Extra section
+==============================-- */
+
+/* -------------------------------
+   Buy Product section styles
+  -------------------------------*/
+.buy-product{
+    padding: 100px 0px;
+    background-image: url(../images/buy.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.product{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 30px;
+}
+.product-item{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #f8f6f7e7;
+    padding: 20px;
+    border-radius: 10px;
+   align-items: center;
+   color: #000;
+   cursor: pointer;
+}
+.product-img img{
+    width: 100%;
+   height: 100%;
+}
+.product-item .product-info h3{
+    font-size: 24px;
+}
+.product-item .product-info p{
+    color: #707070;
+    font-size: 14px;
+    padding: 12px 0;
+}
+/* ------------------------
+     Catagory section styles
+--------------------------- */
+.catagory-section{
+    padding-top: 50px;
+    background: #0A0826;
+    color: #fff;
+}
+.catagory{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+.catagory-section hr{
+    border: 1px solid gray;
+    width: 95%;
+    margin: auto;
+}
+.cata-column{
+    margin-bottom: 5%;
+}
+.cata-column h4{
+    font-size: 24px;
+    margin-bottom: 30px;;
+}
+.cata-column ul li, .cata-column p, .cata-column a{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #707070;
+    cursor: pointer;
+    transition: .3s;
+}
+.cata-column ul li:hover, .cata-column p:hover, .cata-column a:hover{
+    color: #fff;
+}
+.cata-column a:hover{
+    text-decoration: underline;
+    padding-left: 10px;
+}
+.cata-column input{
+    outline: 0;
+    padding: 7px;
+    font-size: 14px;
+    color: #fff;
+    background: #ffffff1e;
+    border: none;
+    border-radius: 5px;
+}
+.icon-coll{
+    display: flex;
+}
+ /*------------------------
+    footer section styles
+--------------------------- */
 .footer{
     background: #0A0826;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
     color: #fff;
 }
-
 .footer-content p{
       color: #D9DBE1;
       font-size: 14px;
       line-height: 2;
 }
 .socal-link{
-    margin-top: 14px;
+    margin-top: 10px;
 }
  .socal-link .icon{
    width: 32px;
@@ -187,16 +373,31 @@ nav{
    border-radius: 50%;
    cursor: pointer;
    margin: 10px;
+   transition: .5s;
 }
-
-/*---------------------
+.socal-link .icon:hover{
+    background: #fff;
+    color: gray;
+}
+/*--================
      media query
------------------------*/
-/*--------Mobile----- */
+===================--*/
+
+/*--------------------
+Mobile Responsive
+----------------------- */
 @media only screen and (max-width: 767px) {
     nav{
         flex-direction: column;
         padding: 40px;
+        align-content: center;
+    }
+    nav .logo{
+        display: flex;
+        justify-content: center;
+    }
+    header .bar-icon{
+        display: block;
     }
     .navbar{
         display: none;
@@ -204,22 +405,33 @@ nav{
     .container{
         width: 100%;
     }
+    /* ------banner----- */
+    .banner-left{
+       margin-top: 0;
+    }
+    .banner-left .banner-title{
+        font-size: 34px;
+    }
     .bannar-content{
          grid-template-columns: repeat(1, 1fr);
          padding: 30px 0;
+         text-align: center;
     }
-    .banner-right{
-       width: 100%;
-       height: 100%;
-       margin: 50px auto;
-       padding: 30px;
-    }
+    /* --------brand---------- */
     .brands{
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 50px;
-        justify-content: center;
+        grid-column-gap: 10px;
     }
+    .banner-left{
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+    .brand-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* --------collection------ */
     .collections{
         grid-template-columns: repeat(1, 1fr);
         gap: 30px;
@@ -230,10 +442,30 @@ nav{
      .see-more{
     text-align: center;
     }
+/* ---------buy product------ */
+    .buy-product{
+        padding: 50px 30px;
+    }
+    .product{
+        grid-template-columns: repeat(1, 1fr);
+      }
+    /*--------catagory------- */
+    .catagory{
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+       padding: 30px;
+    }
+    .cata-column h4{
+        font-size: 18px;
+        margin-bottom: 20px;
+        border-bottom: 2px solid gray;
+        display: inline-block;
+    }
 }
-
-/* -----Tablet---- */
-@media only screen and (min-width: 768px) and (max-width: 1023px){
+/* ----------------------
+  Tablet Responsive
+------------------------ */
+@media only screen and (min-width: 768px) and (max-width: 920px){
     nav{
         flex-direction: column;
         padding: 40px;
@@ -244,17 +476,19 @@ nav{
     .container{
         width: 100%;
     }
+    /* --------banner---------- */
     .bannar-content{
         grid-template-columns: repeat(1, 1fr);
         grid-column-gap: 50px;
     }
-    .banner-right{
-      padding-left: 30px;
+    .banner-left{
+      padding: 30px;
       margin-bottom: 5%;
     }
     .brand-section{
         padding: 50px 30px;
     }
+    /* -------collection------- */
     .collections{
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
@@ -265,4 +499,17 @@ nav{
     .see-more{
         text-align: center;
         }
+    /* -----Buy product------ */
+    .buy-product{
+        padding: 70px 50px;
+    }
+    .product{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* ------catagory------- */
+    .catagory{
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+    padding: 30px;
+    }
 }
