@@ -388,13 +388,11 @@ Mobile Responsive
 ----------------------- */
 @media only screen and (max-width: 767px) {
     nav{
-        flex-direction: column;
         padding: 40px;
-        align-content: center;
     }
     nav .logo{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
     }
     header .bar-icon{
         display: block;
