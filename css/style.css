@@ -490,6 +490,9 @@ Mobile Responsive
         border-bottom: 2px solid gray;
         display: inline-block;
     }
+    .cata-column img{
+        width: 300px;
+    }
 }
 /* ----------------------
   Tablet Responsive
@@ -540,5 +543,8 @@ Mobile Responsive
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 10px;
     padding: 30px;
+    }
+    .cata-column img{
+        width: 300px;
     }
 }
